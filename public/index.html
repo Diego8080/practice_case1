@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мое приложение блога</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Приложение блога</h2>
+
+    <!-- Registration/Login -->
+    <div>
+        <input id="username" placeholder="Введите имя">
+        <button onclick="login()">Войти/Зарегистрироваться</button>
+        <p id="welcome"></p>
+    </div>
+
+    <!-- Create Post -->
+    <div id="postSection" class="hidden">
+        <h3>Создать пост</h3>
+        <input id="postTitle" placeholder="Название"> <br>
+        <textarea id="postContent" placeholder="Напишите что-нибудь..."></textarea><br>
+        <input id="tags" placeholder="Теги (разделенные запятыми)">
+        <label><input type="checkbox" id="privatePost"> Приватный (только по запросу)</label>
+        <button onclick="createPost()">Опубликовать</button>
+    </div>
+
+    <!-- Tag Filter -->
+    <div>
+        <h4>Фильтр по тегам:</h4>
+        <div id="tagFilter"></div>
+    </div>
+
+    <!-- Public Posts -->
+    <h3>Публичные посты</h3>
+    <div id="publicPosts"></div>
+
+    <!-- Requested Posts -->
+    <h3>Запрошенные посты</h3>
+    <div id="requestedPosts"></div>
+
+    <!-- Subscriptions -->
+    <h3>Подписки</h3>
+    <input id="subscribeTo" placeholder="Имя пользователя чтобы подписаться">
+    <button onclick="subscribe()">Подписаться</button>
+    <div id="subscribedPosts"></div>
+    <script src="index.js"></script>
+</div>
+</body>
+</html>
